@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro ChatGPT México</title>
+<style>
+* {
+  margin:0; padding:0; box-sizing:border-box;
+}
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background: #F8F9FA;
+  color: #333;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  padding-bottom: 80px;
+}
+h1 {
+  font-size: 28px;
+  color: #007A4D;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 22px;
+  color: #007A4D;
+  margin: 30px 0 10px 0;
+}
+h3 {
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+}
+p {
+  margin-bottom: 12px;
+}
+ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+/* 图片可点击 */
+.step-img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 12px 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.step-img:active {
+  transform: scale(0.98);
+}
+
+/* 图片放大 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.modal-img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 8px;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* 卡片样式 */
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+.alert {
+  background: #FFF9E6;
+  border-left: 4px solid #FFD166;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 30px 0;
+}
+
+/* 广告位 */
+.ad-space {
+  width: 100%;
+  height: 100px;
+  background: #f1f1f1;
+  border-radius: 12px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+}
+.ad-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ========== 留言区样式（永久保存版） ========== */
+.comment-section {
+  margin-top: 40px;
+}
+.comment-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+.comment-btn {
+  background: #007A4D;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+.comment-btn:active {
+  opacity: 0.9;
+}
+.comment-list {
+  margin-top: 20px;
+}
+.comment-item {
+  background: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.comment-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.comment-name {
+  font-weight: bold;
+  color: #007A4D;
+}
+.comment-time {
+  font-size: 14px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Registro de ChatGPT Paso a Paso (2026)</h1>
+<p>Aprende a registrar tu cuenta en 3–5 minutos, 100% para México.</p>
+
+<div class="ad-space">Espacio publicitario</div>
+<div class="divider"></div>
+
+<h2>Requisitos obligatorios</h2>
+<div class="card">
+<ul>
+  <li>Conexión internacional (México o EE.UU.)</li>
+  <li>Correo Gmail o Outlook</li>
+  <li>Mayor de 18 años</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>6 Pasos para registrarse</h2>
+
+<h3>Paso 1: Ingresa al sitio oficial</h3>
+<img class="step-img" src="img/registro/paso1.jpg" onclick="openModal(this.src)">
+<p>Abre Chrome o Edge y visita chat.openai.com. Pulsa Registrate.</p>
+
+<h3>Paso 2: Escribe correo y contraseña</h3>
+<img class="step-img" src="img/registro/paso2.jpg" onclick="openModal(this.src)">
+<p>Ingresa tu correo y crea una contraseña segura. Pulsa Continuar.</p>
+
+<div class="ad-space">Espacio publicitario</div>
+
+<h3>Paso 3: Verifica tu correo</h3>
+<img class="step-img" src="img/registro/paso3.jpg" onclick="openModal(this.src)">
+<p>Revisa tu bandeja o Spam. Pulsa el enlace Verify email.</p>
+
+<h3>Paso 4: Completa tus datos</h3>
+<img class="step-img" src="img/registro/paso4.jpg" onclick="openModal(this.src)">
+<p>Escribe nombre, apellido y fecha de nacimiento. Pulsa Continuar.</p>
+
+<h3>Paso 5: Verificación humana</h3>
+<img class="step-img" src="img/registro/paso5.jpg" onclick="openModal(this.src)">
+<p>Desliza la casilla para verificar.</p>
+
+<h3>Paso 6: Cuenta creada</h3>
+<img class="step-img" src="img/registro/paso6.jpg" onclick="openModal(this.src)">
+<p>Ya puedes usar ChatGPT.</p>
+
+<div class="divider"></div>
+
+<h2>Uso básico rápido</h2>
+<div class="card">
+<ul>
+  <li>Escribe en la caja inferior</li>
+  <li>Modelo gratuito: GPT-3.5</li>
+  <li>New chat para nuevo tema</li>
+</ul>
+</div>
+
+<div class="divider"></div>
+
+<h2>Errores más comunes</h2>
+<div class="alert">
+<ul>
+  <li>No llega el correo: revisa Spam</li>
+  <li>Región bloqueada: usa México/EE.UU.</li>
+  <li>No inicia sesión: no cambies de red</li>
+</ul>
+</div>
+
+<div class="ad-space">Espacio publicitario</div>
+
+<!-- ====================== 永久留言区 ====================== -->
+<div class="comment-section">
+  <h2>Comentarios</h2>
+  <input class="comment-input" id="nameInput" placeholder="Tu nombre (opcional)">
+  <textarea class="comment-input" id="msgInput" rows="3" placeholder="Escribe tu comentario..."></textarea>
+  <button class="comment-btn" onclick="saveComment()">Enviar comentario</button>
+
+  <div class="comment-list" id="commentList"></div>
+</div>
+<!-- ======================================================= -->
+
+<div class="ad-bottom">Espacio publicitario</div>
+
+<!-- 图片放大 -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-img" id="modalImg">
+</div>
+
+<script>
+// 图片放大
+let modal = document.getElementById("modal");
+let modalImg = document.getElementById("modalImg");
+function openModal(src) {
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// ========== 永久留言（本地存储） ==========
+function loadComments() {
+  let list = document.getElementById("commentList");
+  list.innerHTML = "";
+  let comments = JSON.parse(localStorage.getItem("chatgptComments") || "[]");
+
+  comments.forEach(cm => {
+    let item = document.createElement("div");
+    item.className = "comment-item";
+
+    let head = document.createElement("div");
+    head.className = "comment-head";
+
+    let name = document.createElement("div");
+    name.className = "comment-name";
+    name.innerText = cm.name || "Usuario";
+
+    let time = document.createElement("div");
+    time.className = "comment-time";
+    time.innerText = cm.time;
+
+    head.appendChild(name);
+    head.appendChild(time);
+
+    let content = document.createElement("div");
+    content.innerText = cm.text;
+
+    item.appendChild(head);
+    item.appendChild(content);
+    list.appendChild(item);
+  });
+}
+
+function saveComment() {
+  let name = document.getElementById("nameInput").value.trim() || "Usuario";
+  let text = document.getElementById("msgInput").value.trim();
+  if (!text) return;
+
+  let now = new Date();
+  let timeStr = now.toLocaleString("es-MX");
+
+  let comment = { name, text, time: timeStr };
+  let comments = JSON.parse(localStorage.getItem("chatgptComments") || "[]");
+  comments.unshift(comment);
+  localStorage.setItem("chatgptComments", JSON.stringify(comments));
+
+  document.getElementById("msgInput").value = "";
+  loadComments();
+}
+
+// 页面加载时自动显示留言
+window.onload = loadComments;
+</script>
+
+</body>
+</html>
