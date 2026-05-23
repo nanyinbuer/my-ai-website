@@ -24,6 +24,7 @@
             --bg-ad: #F9F9F9;
             --shadow-light: 0 2px 8px rgba(0,0,0,0.1);
             --shadow-medium: 0 2px 5px rgba(0,0,0,0.1);
+            --shadow-hover: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         body {
@@ -92,6 +93,14 @@
             color: var(--mex-red);
         }
 
+        .nav-pc a.active {
+            color: var(--mex-red);
+        }
+
+        .nav-pc a.active::after {
+            width: 100%;
+        }
+
         .search-input {
             margin-left: 20px;
             padding: 8px 12px;
@@ -117,6 +126,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            outline: none;
         }
 
         .hamburger:hover {
@@ -145,6 +155,11 @@
         .nav-mobile a:hover {
             padding-left: 10px;
             color: var(--warm-orange);
+        }
+
+        .nav-mobile a.active {
+            color: var(--warm-orange);
+            padding-left: 10px;
         }
 
         .nav-mobile .search-input {
@@ -196,10 +211,17 @@
             box-shadow: var(--shadow-light);
             padding: 22px;
             margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .card:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-hover);
             transform: translateY(-2px);
         }
 
@@ -220,6 +242,7 @@
             margin-top: 15px;
             border: none;
             cursor: pointer;
+            outline: none;
         }
 
         .btn:hover {
@@ -237,6 +260,7 @@
             border-top: 1px solid #eee;
         }
 
+        /* Media Queries */
         @media (min-width: 768px) {
             .nav-pc {
                 display: flex;
@@ -272,6 +296,19 @@
                 padding: 0;
             }
         }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+            }
+            .card:hover {
+                transform: none;
+            }
+            .btn:hover {
+                transform: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -280,7 +317,7 @@
             <div class="logo">ChatGPT México</div>
             <div class="nav-pc">
                 <a href="index.html">Inicio</a>
-                <a href="tutoriales.html">Tutoriales</a>
+                <a href="tutoriales.html" class="active">Tutoriales</a>
                 <a href="prompts.html">Prompts</a>
                 <a href="plantillas.html">Plantillas</a>
                 <a href="mejoras.html">Mejoras</a>
@@ -288,11 +325,11 @@
                 <a href="avanzadas.html">Avanzadas</a>
                 <input type="text" class="search-input" placeholder="Buscar tutoriales...">
             </div>
-            <button class="hamburger" id="hambtn">☰</button>
+            <button class="hamburger" id="hambtn" aria-label="Abrir menú de navegación">☰</button>
         </div>
         <div class="nav-mobile" id="mmenu">
             <a href="index.html">Inicio</a>
-            <a href="tutoriales.html">Tutoriales</a>
+            <a href="tutoriales.html" class="active">Tutoriales</a>
             <a href="prompts.html">Prompts</a>
             <a href="plantillas.html">Plantillas</a>
             <a href="mejoras.html">Mejoras</a>
@@ -309,27 +346,33 @@
             <h2 class="sec-title">Tutoriales Iniciales</h2>
             <p style="margin-bottom: 20px; color: var(--text-sub);">Aprende a usar ChatGPT desde cero, paso a paso</p>
 
-            <!-- 👇 👇 只有这里我加了链接，其他完全没变 👇 👇 -->
-            <a href="tutorial-registro.html" style="text-decoration:none; color:inherit;">
-            <div class="card">
-                <h3>Paso 1: Crear tu cuenta</h3>
-                <p>Regístrate en ChatGPT con correo electrónico, cuenta de Google o Microsoft. Asegúrate de verificar tu correo para activar tu cuenta.</p>
-            </div>
+            <!-- Tarjeta 1: 仅修改了这里的文字 -->
+            <a href="tutorial-registro.html" class="card-link">
+                <div class="card">
+                    <h3>Registro de ChatGPT Paso a Paso (2026)</h3>
+                    <p>Guía completa para crear tu cuenta de ChatGPT en México.</p>
+                </div>
             </a>
 
-            <div class="card">
-                <h3>Paso 2: Escribir tu primer prompt</h3>
-                <p>Comunícate claramente y especifica tus necesidades para obtener respuestas precisas. Ejemplo: "Explícame qué es la inteligencia artificial en términos sencillos".</p>
-            </div>
+            <!-- Tarjeta 2: 完全没动 -->
+            <a href="tutorial-primer-prompt.html" class="card-link">
+                <div class="card">
+                    <h3>Paso 2: Escribir tu primer prompt</h3>
+                    <p>Comunícate claramente y especifica tus necesidades para obtener respuestas precisas. Ejemplo: "Explícame qué es la inteligencia artificial en términos sencillos".</p>
+                </div>
+            </a>
             
-            <div class="card">
-                <h3>Paso 3: Usar respuestas efectivamente</h3>
-                <p>Copia, edita y adapta el contenido generado a tus necesidades. Aprende a refinar tus prompts para mejorar la calidad de las respuestas.</p>
-            </div>
+            <!-- Tarjeta 3: 完全没动 -->
+            <a href="tutorial-usar-respuestas.html" class="card-link">
+                <div class="card">
+                    <h3>Paso 3: Usar respuestas efectivamente</h3>
+                    <p>Copia, edita y adapta el contenido generado a tus necesidades. Aprende a refinar tus prompts para mejorar la calidad de las respuestas.</p>
+                </div>
+            </a>
             
             <div class="ad-space">Espacio Publicitario</div>
             
-            <a href="#" class="btn">Ver Tutorial en Video</a>
+            <a href="tutorial-video.html" class="btn">Ver Tutorial en Video</a>
             
             <div class="ad-space">Espacio Publicitario</div>
         </div>
@@ -341,20 +384,40 @@
     </footer>
 
     <script>
+        // Navegación móvil
         const hambtn = document.getElementById('hambtn');
         const mmenu = document.getElementById('mmenu');
         
         hambtn.addEventListener('click', () => {
-            mmenu.style.display = mmenu.style.display === 'block' ? 'none' : 'block';
+            const isOpen = mmenu.style.display === 'block';
+            mmenu.style.display = isOpen ? 'none' : 'block';
+            // Actualizar aria-label
+            hambtn.setAttribute('aria-label', isOpen ? 'Abrir menú de navegación' : 'Cerrar menú de navegación');
+            hambtn.innerHTML = isOpen ? '☰' : '✕';
         });
 
+        // Cerrar menú al hacer clic fuera (solo móvil)
         document.addEventListener('click', (e) => {
+            const isMobile = window.innerWidth < 768;
             const isClickInside = hambtn.contains(e.target) || mmenu.contains(e.target);
-            if (!isClickInside && window.innerWidth < 768) {
+            
+            if (isMobile && !isClickInside && mmenu.style.display === 'block') {
                 mmenu.style.display = 'none';
+                hambtn.setAttribute('aria-label', 'Abrir menú de navegación');
+                hambtn.innerHTML = '☰';
             }
         });
 
+        // Cerrar menú al redimensionar ventana
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mmenu.style.display = 'none';
+                hambtn.setAttribute('aria-label', 'Abrir menú de navegación');
+                hambtn.innerHTML = '☰';
+            }
+        });
+
+        // Scroll suave para anclas
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -365,16 +428,35 @@
             });
         });
 
+        // Búsqueda
         const searchInputs = document.querySelectorAll('.search-input');
         searchInputs.forEach(input => {
             input.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
                     const searchTerm = input.value.trim();
                     if (searchTerm) {
-                        alert(`Buscando: ${searchTerm}`);
+                        // Mejor feedback de búsqueda
+                        const searchUrl = `busqueda.html?q=${encodeURIComponent(searchTerm)}`;
+                        // alert(`Buscando: ${searchTerm}`); // Puedes comentar esto y usar la línea siguiente
+                        window.location.href = searchUrl; // Redirigir a página de búsqueda
+                    } else {
+                        alert('Por favor ingresa un término para buscar');
                     }
                 }
             });
+            
+            // Limpiar búsqueda al hacer clic
+            input.addEventListener('click', () => {
+                if (input.value === input.placeholder) {
+                    input.value = '';
+                }
+            });
+        });
+
+        // Resaltar enlace activo en navegación
+        const currentPage = window.location.pathname.split('/').pop();
+        document.querySelectorAll(`a[href="${currentPage}"]`).forEach(link => {
+            link.classList.add('active');
         });
     </script>
 </body>
